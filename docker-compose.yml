@@ -11,6 +11,7 @@ services:
       - NANO_SERIAL=/dev/ttyNANO0
       - NANO_BAUD=9600
   influxdb:
+    image: influxdb:1.7
     networks:
       - monitor
     volumes:
