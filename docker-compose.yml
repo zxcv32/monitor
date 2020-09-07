@@ -20,7 +20,7 @@ services:
     - 8086:8086
 
 networks:
-  network:
+  monitor:
 
 volumes:
   influxdb:
