@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nano:
+    build: .
+    restart: always
+    devices:
+      - /dev/ttyUSB0:/dev/ttyNANO0
+    environment:
+      - NANO_SERIAL=/dev/ttyNANO0
+      - NANO_BAUD=9600
