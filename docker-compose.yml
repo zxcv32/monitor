@@ -4,13 +4,15 @@ services:
     build: .
     restart: always
     networks:
-      monitor
+      - monitor
     devices:
       - /dev/ttyUSB0:/dev/ttyNANO0
     environment:
       - NANO_SERIAL=/dev/ttyNANO0
       - NANO_BAUD=9600
   influxdb:
+    networks:
+      - monitor
     volumes:
     - influxdb:/var/lib/influxdb
     ports:
